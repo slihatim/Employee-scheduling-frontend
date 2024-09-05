@@ -1,0 +1,10 @@
+.solution {
+    width: 680px;
+    margin: 30px 40px;
+}
+
+.solution h1{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 8px;
+}

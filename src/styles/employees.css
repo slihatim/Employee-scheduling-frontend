@@ -1,0 +1,135 @@
+/* main color : #367dcb
+  light color : #ecf4ff
+*/
+
+.employees {
+    width: 680px;
+    margin: 30px 40px;
+}
+
+.employees h1{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 8px;
+}
+
+.add-button {
+    margin-bottom: 15px;
+    width: 80px;
+    height: 35px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2.2px solid #367dcb;
+    background-color: #ecf4ff;
+    font-family: 'Poppins';
+    font-weight: 800;
+    color: #367dcb;
+}
+
+.add-button:hover {
+    background-color: #367dcb;
+    color: white;
+}
+
+.employees table {
+    width: 100%;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.employees thead {
+    background-color: #ecf4ff;
+}
+
+.employees th {
+    font-weight: 600;
+    padding: 5px 0;
+}
+
+.employees th:first-child {
+    border-radius: 15px 0 0 0;
+}
+
+.employees th:last-child{
+    border-radius: 0 15px 0 0;
+}
+
+.employees td {
+    font-size: 0.9rem;
+}
+
+.employees td {
+    border-bottom: 2px solid #ecf4ff;
+}
+
+.edit-button, .delete-button {
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.8rem;
+    font-family: 'Poppins';
+}
+
+.edit-button {
+    background-color: #fffef3;
+    border: 2px solid #cb9936;
+    color: #cb9936;
+}
+
+.edit-button:hover {
+    background-color: #cb9936;
+    color: white;
+}
+
+.delete-button {
+    background-color: #fff3f3;
+    border: 2px solid #cb3636;
+    color: #cb3636;
+}
+
+.delete-button:hover {
+    background-color: #cb3636;
+    color: white;
+}
+
+.new-employee {
+    margin-top: 50px;
+    background-color: #ecf4ff;
+    width: 400px;
+    height: 300px;
+    padding: 5px 40px 5px 30px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    box-shadow: 1px 2px 5px rgba(0,0,0,0.15);
+}
+
+.new-employee input, .new-employee select {
+    height: 35px;
+    border-radius: 5px;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.new-employee input[type="text"]::placeholder {
+    font-family: 'Poppins';
+    
+}
+
+.cancel-button {
+    margin-left: 7px;
+    width: 80px;
+    height: 35px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2.2px solid rgb(34, 34, 34);
+    background-color: #ecf4ff;
+    font-family: 'Poppins';
+    font-weight: 700;
+    color: rgb(34, 34, 34);
+}
+
+.cancel-button:hover {
+    background-color: rgb(34, 34, 34);
+    color: white;
+}
+
