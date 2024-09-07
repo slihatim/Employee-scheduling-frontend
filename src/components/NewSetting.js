@@ -13,7 +13,7 @@ const NewSetting = () => {
 
   function addSetting(day, shift, skill, minEmployees){
     const tempSettings = [...settings];
-    tempSettings.push({id: tempSettings.length ? tempSettings[tempSettings.length-1].id+1 : 1, day,shift,skill,minEmployees});
+    tempSettings.push({id: tempSettings.length ? (+(tempSettings[tempSettings.length-1].id)+1)+'' : 1, day,shift,skill,minEmployees});
     setSettings(tempSettings);
     localStorage.setItem('settings',JSON.stringify(tempSettings));
   }

@@ -20,7 +20,7 @@ const StartDate = () => {
             onChange={(e) => startDateObj.setStartDate(e.target.value)}
             />
           <button onClick={(event) => 
-            {if(new Date(startDateObj.startDate).getDay() != 1)
+            {if(startDateObj.startDate && new Date(startDateObj.startDate).getDay() != 1)
               alert("should be a monday");
               
             else if(startDateObj.startDate) {
