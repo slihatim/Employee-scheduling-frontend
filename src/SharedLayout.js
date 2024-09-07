@@ -4,16 +4,14 @@ import { useState,useEffect } from 'react';
 import { settingsData, employeesData } from './data/data';
 
 const SharedLayout = () => {
-  let data = '';
 
   useEffect(() => {
     const initialGetRequest = async () => {
       try{
-        const response = await fetch('https://jsonplaceholder.typicode.com/todos');
+        const response = await fetch('https://quarkus-app-backend-employee-scheduing.onrender.com/');
         if(!response.ok)  throw new Error('server is not running');
-        data = await response.json();
       }catch(err){
-        alert(err);
+        console.error(err);
       }
     }
     (async () => await initialGetRequest())()
@@ -67,7 +65,6 @@ const SharedLayout = () => {
   return (
     <main>
         <NavBar />
-        <div>{data}</div>
         <Outlet context={props}/>
     </main>
   )
