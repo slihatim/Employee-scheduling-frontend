@@ -10,11 +10,11 @@ const SharedLayout = () => {
     const initialGetRequest = async () => {
       try{
         const response = await fetch('https://quarkus-app-backend-employee-scheduing.onrender.com/');
-        if(!response.ok)  throw new Error('server is not running');
+        if(!response.ok)  throw new Error(`HTTP error! status: ${response.status}`);
         const data = await response.text();
         setHtml(data);
       }catch(err){
-        console.error(err);
+        console.error(err.message);
       }
     }
     (async () => await initialGetRequest())()
@@ -68,7 +68,7 @@ const SharedLayout = () => {
   return (
     <main>
         <NavBar />
-        <div>{html}</div>
+        <div dangerouslySetInnerHTML={{ __html: html }} />
         <Outlet context={props}/>
     </main>
   )
