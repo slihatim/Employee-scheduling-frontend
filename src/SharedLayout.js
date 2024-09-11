@@ -4,15 +4,13 @@ import { useState,useEffect } from 'react';
 import { settingsData, employeesData } from './data/data';
 
 const SharedLayout = () => {
-  const [html, setHtml] = useState('');
 
   useEffect(() => {
     const initialGetRequest = async () => {
       try{
         const response = await fetch('https://quarkus-app-backend-employee-scheduing.onrender.com/');
-        if(!response.ok)  throw new Error(`HTTP error! status: ${response.status}`);
+        if(!response.ok)  throw new Error(`Server is inactive, HTTP error! status: ${response.status}`);
         const data = await response.text();
-        setHtml(data);
       }catch(err){
         console.error(err.message);
       }
@@ -68,7 +66,6 @@ const SharedLayout = () => {
   return (
     <main>
         <NavBar />
-        <div dangerouslySetInnerHTML={{ __html: html }} />
         <Outlet context={props}/>
     </main>
   )
