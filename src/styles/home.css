@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.home {
+    width: 680px;
+    margin: 30px 40px;
+}
+
+.blue {
+    color: #367dcb;
+}
+
+.green {
+    color : #29bb92;
+    font-weight: 600;
+}
+
+.home code {
+    font-family: "Space Mono", monospace;
+    color : #eb574d;
+    /* font-weight: 600; */
+    background-color: rgb(255, 243, 243);
+    border-radius: 5px;
+}
+
+.home li {
+    margin-bottom: 10px;
+}

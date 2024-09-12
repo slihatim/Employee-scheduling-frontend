@@ -24,7 +24,7 @@ const EditSetting = () => {
   return (
     <div className='center'>
         <section className='new-employee' style={{minHeight: '440px'}}>
-        <h3>Edit Setting</h3>
+        <h3>Edit Daily Need</h3>
             <form style={{display:'inline'}} onSubmit={e => e.preventDefault()}>
                 <label>Day : 
                   <select style={{display: 'block', width: '100%',marginBottom: '15px'}} 

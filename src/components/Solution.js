@@ -10,6 +10,7 @@ const Solution = () => {
 
   const [lastId, setLastId] = useState(localStorage.getItem('lastId') || '');
   const [isLoading, setIsLoading] = useState(false);
+  const [isPostLoading, setIsPostLoading] = useState(false);
 
   const input = {
     shiftAssignments : [],
@@ -49,6 +50,7 @@ const Solution = () => {
       //posting input data to server
       let errorFlag = true;
       let tempLastId = '';
+      setIsPostLoading(true);
       try{
         const response = await fetch(URL,{
           method: 'POST',
@@ -71,6 +73,7 @@ const Solution = () => {
         console.error(error.message);
       }finally{
         if(!errorFlag){
+          setIsPostLoading(false);
           setIsLoading(true);
           (async () => await gettingSolution(tempLastId))()
         }
@@ -124,18 +127,30 @@ const Solution = () => {
     })
   }
 
+  function exportToJSON(){
+    const jsonString = JSON.stringify(output.shiftAssignments, null, 2);
+    const dataUri = `data:application/json;charset=utf-8,${encodeURIComponent(jsonString)}`;
+    const link = document.createElement("a");
+    link.href = dataUri;
+    link.download = "output.json";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
   return (
     <div className='center'>
       <section className='solution'>
         <h1>Visualizing the solution</h1>
         <button className='add-button' onClick={solve}>Solve</button>
-        {isLoading ? <ReverseTimer /> : ''}
+        <button className='cancel-button export-button' onClick={exportToJSON}>export as JSON</button>
+        {isPostLoading ? <div>please wait...</div> : isLoading ? <ReverseTimer /> : ''}
       </section>
       <section style={{flexBasis: '90%',marginBottom:'20px'}}> 
-        <SchedulerComponent className='scheduler' isLoading={isLoading} startDate={startDate} shifts={output.shiftAssignments}/>
+        <SchedulerComponent className='scheduler' isLoading={isLoading} startDate={startDate} shifts={output.shiftAssignments} />
       </section>
     </div>
   )
 }
 
-export default Solution
+export default Solution;

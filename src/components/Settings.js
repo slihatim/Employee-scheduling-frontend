@@ -16,7 +16,7 @@ const Settings = () => {
   return (
     <div className='center'>
       <section className='employees'>
-        <h1>Add settings</h1>
+        <h1>Add daily needs</h1>
         <Link to="/new-setting"><button className='add-button'>Add</button></Link>
         <table>
           <thead>

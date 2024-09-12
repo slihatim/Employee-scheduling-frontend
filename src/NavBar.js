@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <nav>
+    <nav style={{textAlign:'center'}}>
         <ul>
             <li>
                 <NavLink to="/" 
@@ -22,7 +22,7 @@ const NavBar = () => {
             <li>
                 <NavLink to="settings" 
                 className={({isActive}) => (isActive ? "selected no-style-link" : "no-style-link")}
-                >3. Settings</NavLink>
+                >3. Daily needs</NavLink>
             </li>
             <li>
                 <NavLink to="solution" 

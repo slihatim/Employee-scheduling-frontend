@@ -1,6 +1,7 @@
 .solution {
     width: 680px;
     margin: 30px 40px 0px 40px;
+    position: relative;
 }
 
 .solution h1, .solution p{
@@ -9,7 +10,19 @@
     margin-bottom: 8px;
 }
 
-.scheduler {
-    
+.export-button {
+    min-width: 130px;
+    background-color: #fafffd;
+    color: #36cba1;
+    border-color: #36cba1;
+}
+
+.export-button:hover {
+    background-color: #36cba1;
+}
+
+.fullscreen-button {
+    min-width: 160px;
+    background-color: white;
 }
 

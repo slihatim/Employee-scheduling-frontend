@@ -4,7 +4,7 @@ import dayjs from "dayjs";
 import isBetween from "dayjs/plugin/isBetween";
 import { useState, useEffect, useCallback } from "react";
 
-export default function SchedulerComponent({isLoading, startDate, shifts}) {
+export default function SchedulerComponent({isLoading, startDate, shifts, fullscreen}) {
     dayjs.extend(isBetween);
     const [filterButtonState, setFilterButtonState] = useState(-1);
     const bgColors = ['#e8817f','#8d5273','#311f62','#808080'];
@@ -131,7 +131,7 @@ export default function SchedulerComponent({isLoading, startDate, shifts}) {
         }))
 
     return (
-        <section style={{position: 'relative',minHeight:'500px', minWidth:'100px'}}>
+        <section style={{position:'relative',minHeight:'500px',height:'600px', minWidth:'100px'}}>
         <Scheduler
             data={filteredConvertedOutput}
             isLoading={isLoading}
@@ -144,7 +144,6 @@ export default function SchedulerComponent({isLoading, startDate, shifts}) {
             filterButtonState,
             showThemeToggle: true
             }}
-            range={range}
             
         />
         </section>
