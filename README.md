@@ -5,6 +5,8 @@ This app ***schedules shifts*** for employees for 3 weeks. There are work shifts
 - You can specify your ***daily needs*** for each skill (Engineer, Consultant...), for each shift (M,S,N,R), in each day (MONDAY, TUESDAY...).
 - ***Example of a daily need :*** "On a Monday, in M shift, i need at least 2 Engineers, and 3 Consultants"
 - Each employee ***has to work 5 days*** in the same shift, and ***get 2 days of rest***. Specifically, the pattern during 3 weeks should be `MMMMMRRNNNNNRRSSSSSRR` in a cyclic manner, to ensure that he gets at least 2 days and a half of rest.
+- ***Note 1:*** the app has initial data for employees and daily needs.
+- ***Note 2:*** All data entered is saved to local storage of your browser.
 
 ## How to run the application
 

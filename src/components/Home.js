@@ -15,6 +15,10 @@ const Home = () => {
           <li><span className='green'>Example of a daily need :</span> "On a Monday, in M shift, i need at least 2 Engineers, and 3 Consultants"</li>
           
           <li>Each employee <span className='green'>has to work 5 days</span> in the same shift, and <span className='green'>get 2 days of rest</span>. Specifically, the pattern during 3 weeks should be <code style={{fontFamily: 'Poppins'}}>MMMMMRRNNNNNRRSSSSSRR</code> in a cyclic manner, to ensure that he gets at least 2 days and a half of rest. </li>
+
+          <li><span className='green'>Note 1:</span> the app has initial data for employees and daily needs.</li>
+
+          <li><span className='green'>Note 2:</span> All data entered is saved to local storage of your browser. </li>
         </ul>
         
         <h2 className='blue'>How to run the application</h2>
