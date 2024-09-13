@@ -27,7 +27,7 @@ const Home = () => {
           <li><span className='green'>Add daily needs</span> either manually, or <span className='green'>import them as a JSON</span> array in this specific format <code>[<br/>&nbsp;&nbsp;{'{'}"id": "1","day": "MONDAY","shift": "M","skill": "Consultant","minEmployees": 2{'}'},<br/>&nbsp;&nbsp;
             {'{'}"id": "2","day": "MONDAY","shift": "M","skill": "Engineer","minEmployees": 1{'}'}]</code></li>
           
-          <li>Finally, you can click on the <span className='green'>solve</span> button, and wait 3 minutes for the solving to happen. You can <span className='green'>export the solution as JSON</span>, and you can view the solution in <span className='green'>fullscreen</span>. </li>
+          <li>Finally, you can click on the <span className='green'>solve</span> button, and wait 3 minutes for the solving to happen. Also, you can <span className='green'>export the solution as JSON</span>. </li>
         </ol>
       </section>
     </div>
