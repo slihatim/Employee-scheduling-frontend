@@ -2,6 +2,11 @@
   light color : #ecf4ff
 */
 
+::selection {
+    color : #eb574d;
+    background-color: rgb(255, 220, 220);
+}
+
 body {
   margin: 0;
   padding: 0;
