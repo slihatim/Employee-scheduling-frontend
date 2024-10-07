@@ -15,8 +15,8 @@ This app ***schedules shifts*** for employees for 3 weeks. There are work shifts
 2. ***Add employees*** either manually, or ***import them as a JSON*** array in this specific format  
 ```json
 [  
-  {"name": "worker 0", skills: ["Engineer"]},
-  {"name": "worker 1", skills: ["Consultant"]}
+  {"name": "worker 0", "skills": ["Engineer"]},
+  {"name": "worker 1", "skills": ["Consultant"]}
 ]
 ```
 
