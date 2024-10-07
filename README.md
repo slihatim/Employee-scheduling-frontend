@@ -12,13 +12,20 @@ This app ***schedules shifts*** for employees for 3 weeks. There are work shifts
 
 1. Start out by entering the ***start date*** (should be a Monday).
 
-2. ***Add employees*** either manually, or ***import them as a JSON*** array in this specific format  `[  
+2. ***Add employees*** either manually, or ***import them as a JSON*** array in this specific format  
+```json
+[  
   {"name": "worker 0", skills: ["Engineer"]},
   {"name": "worker 1", skills: ["Consultant"]}
-]`
+]
+```
 
-3. ***Add daily needs*** either manually, or ***import them as a JSON*** array in this specific format `[
+3. ***Add daily needs*** either manually, or ***import them as a JSON*** array in this specific format 
+```json
+[
   {"id": "1","day": "MONDAY","shift": "M","skill": "Consultant","minEmployees": 2},
-  {"id": "2","day": "MONDAY","shift": "M","skill": "Engineer","minEmployees": 1}]`
+  {"id": "2","day": "MONDAY","shift": "M","skill": "Engineer","minEmployees": 1}
+]
+```
 
 4. Finally, you can click on the ***solve*** button, and wait 3 minutes for the solving to happen. Also, You can ***export the solution as JSON***.
