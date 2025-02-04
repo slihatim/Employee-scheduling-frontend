@@ -8,7 +8,7 @@ This app ***schedules shifts*** for employees for 3 weeks. There are work shifts
 - ***Note 1:*** the app has initial data for employees and daily needs.
 - ***Note 2:*** All data entered is saved to local storage of your browser.
 
-## How to run the application
+## How to use the application
 
 1. Start out by entering the ***start date*** (should be a Monday).
 
